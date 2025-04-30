@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>کوروش ضیا خدادادیان</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+    }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      margin-top: 40px;
+      text-align: right;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #007bff;
+      margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-box {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #007bff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .contact-list li {
+      margin-bottom: 8px;
+    }
+
+    .alert-custom {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1055;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="profile-card">
+  <img src="./5803118476599085132.jpg" alt="تصویر کوروش" class="profile-img">
+
+  <h2 class="text-center text-primary">کوروش ضیا خدادادیان</h2>
+  <p class="text-center">متولد ۱۳۸۵ | مشهد | دانشجوی نرم‌افزار، دانشکده شمسی‌پور تهران</p>
+  <p class="text-center">بیش از ۵ سال سابقه در حوزه پوشاک مردانه و زنانه</p>
+
+  <div class="section-box">
+    <div class="section-title">مهارت‌ها</div>
+    <ul class="list-unstyled">
+      <li>پایتون</li>
+      <li>وردپرس</li>
+      <li>نصب سیستم صوتی خودرو</li>
+      <li>فروشندگی</li>
+    </ul>
+  </div>
+
+  <div class="section-box">
+    <div class="section-title">سوابق کاری</div>
+    <ul class="list-unstyled">
+      <li>۸ سال فعالیت در پوشاک سوگلی</li>
+      <li>۵ ماه فعالیت در فروشگاه سیستم صوتی خودرو سینا ردیاب</li>
+    </ul>
+  </div>
+
+  <div class="section-box">
+    <div class="section-title">راه‌های ارتباطی</div>
+    <ul class="list-unstyled contact-list">
+      <li><strong>📞 تلفن:</strong> 09397608441</li>
+      <li><strong>📧 ایمیل:</strong> zkkourosh1@gmail.com</li>
+      <li><strong>📱 تلگرام:</strong> ShvKh3eKxuRi@</li>
+    </ul>
+  </div>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#commentModal">ارسال نظر</button>
+  </div>
+</div>
+
+<div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-start">
+      <div class="modal-header">
+        <h5 class="modal-title" id="commentModalLabel">ارسال نظر</h5>
+        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="بستن"></button>
+      </div>
+      <div class="modal-body">
+        <form id="commentForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">نام خانوادگی</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">نظر شما</label>
+            <textarea class="form-control" id="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">ارسال</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alert alert-success alert-custom" role="alert" id="successAlert">
+  ✅ نظر شما با موفقیت ثبت شد!
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const form = document.getElementById('commentForm');
+  const alertBox = document.getElementById('successAlert');
+  const modal = new bootstrap.Modal(document.getElementById('commentModal'));
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    modal.hide();
+
+    alertBox.style.display = 'block';
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 3000);
+
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
